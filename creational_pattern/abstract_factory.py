@@ -26,7 +26,7 @@ class FrenchRestaurant(Restaurant):
         print('Cordon Blue')
         
     def make_drink(self):
-        print('Merlo')
+        print('Merloo')
         
         
 
