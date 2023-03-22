@@ -64,7 +64,6 @@ class RedmiLaptop():
         if (isinstance(inSocket,PowerSocket)):
             if self.__adapter.convert(inSocket):
                 socket = self.__adapter.getSocket()
-                print('work always not does not matter true or false res value')
                 res=(self.plug.pins == socket.getHoleNum()) and \
                     (self.plug.pinshape == socket.getHoleShape()) and \
                     (self.plug.volt == socket.getHoleVolt())
@@ -108,7 +107,7 @@ class AnyToChineseAdapter(SocketAdapter):
         self.__plug = ""
         
         
-    def convertSocket(self,fromSocket):
+    def convert(self,fromSocket):
         res = True
         if isinstance(fromSocket,chineseSocket):
             self.__voltRatio = 1
@@ -125,6 +124,7 @@ class AnyToChineseAdapter(SocketAdapter):
         else:
             print("Unknown socket cannot choose plug format and volt convertion ratio")
             res = False
+        return res
         
     def getSocket(self):
         return self.__outSocket
@@ -134,14 +134,26 @@ class AnyToChineseAdapter(SocketAdapter):
 
     
 if __name__ == '__main__':
-    laptop = RedmiLaptop() #create instance from RedmiLaptop class
+    
+    redmiAd = AnyToChineseAdapter()
+    laptop = RedmiLaptop()
+    laptop.addAdapter(redmiAd)
     
     #I am in china mainland
     chSocket = chineseSocket()
-    laptop.charge(socket=chSocket,powerInWatt=235)
+    laptop.charge(chSocket,powerInWatt=235)
     
+    #I am in europa mainland
     euSocket = europeanSocket()
-    laptop.charge(socket=euSocket,powerInWatt=235)
+    laptop.charge(euSocket,powerInWatt=235)
+
     
+    #I am in taiwan mainland
     twSocket = taiwaneSocket()
-    laptop.charge(socket=twSocket,powerInWatt=235)
+    laptop.charge(twSocket,powerInWatt=235)
+
+    
+    #I am on Mars
+    msSocket = martianSocket()
+    laptop.charge(msSocket,powerInWatt=235)
+
