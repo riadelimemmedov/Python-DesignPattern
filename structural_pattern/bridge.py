@@ -1,6 +1,12 @@
+
+#It works as a bridge between two incompatible interfaces. This pattern involves a single class which is responsible to join
+#functionalities of independent or incompatible interfaces.
+
+
 from abc import ABC,abstractmethod
 
 
+#!Device
 class Device(ABC):
     volume = 0
     
@@ -9,18 +15,21 @@ class Device(ABC):
     def get_name(self)->str:
         pass
     
-    
+
+#!Radio
 class Radio(Device):
     def get_name(self) -> str:
         return f"Radio {self}"
     
-    
+
+#!TV
 class Tv(Device):
     def get_name(self) -> str:
         return f"Tv {self}"
 
 ###################################################################    
 
+#!Remote
 class Remote(ABC):
     @abstractmethod
     def volume_up(self):
@@ -30,6 +39,8 @@ class Remote(ABC):
     def volume_down(self):
         pass
     
+    
+#!BasicRemote
 class BasicRemote(Remote):
     def __init__(self,device:Device):
         self.device = device
