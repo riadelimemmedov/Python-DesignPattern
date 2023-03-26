@@ -1,4 +1,9 @@
 
+"""
+    The Composite design pattern enables you to compose one whole object from one or more individual objects to represent a part-whole hierarchy. 
+    As an example, we can build a tree (a composite structure) using multiple objects (also called the leaves of the tree).
+"""
+
 #!Equipment
 class Equipment:
     def __init__(self,name:str,price:int):
