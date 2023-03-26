@@ -1,8 +1,6 @@
 
-#! It works as a bridge between two incompatible interfaces. This pattern involves a single class which is responsible to join
-#!functionalities of independent or incompatible interfaces.
 
-
+#!PowerSocket
 class PowerSocket():
     """
         PowerSocket base class
@@ -25,18 +23,25 @@ class PowerSocket():
     
 
 #define custom type of power socket for each country
+#!chineseSocket
 class chineseSocket(PowerSocket):
     def __init__(self):
         super().__init__(3,"FLAT",220)
 
+
+#!europeanSocket
 class europeanSocket(PowerSocket):
     def __init__(self):
         super().__init__(2,"ROUND",250)
-        
+
+
+#!taiwaneSocket
 class taiwaneSocket(PowerSocket):
     def __init__(self):
         super().__init__(2,"FLAT",110)
         
+
+#!martianSocket
 class martianSocket(PowerSocket):
     def __init__(self):
         super().__init__(2,"FLAT",300)
@@ -44,6 +49,7 @@ class martianSocket(PowerSocket):
 
 
 #My plug 
+#!chinise3pinPlug
 class chinise3pinPlug():#think for computer socket plug format this code
     def __init__(self):
         self.pins = 3
@@ -51,6 +57,7 @@ class chinise3pinPlug():#think for computer socket plug format this code
         self.pinshape = "FLAT"
 
 
+#!RedmiLaptop
 class RedmiLaptop():
     def __init__(self):
         self.plug = chinise3pinPlug()
@@ -78,7 +85,8 @@ class RedmiLaptop():
             print('Socket and plug not compatible, impossible to charge')
         return res
     
-    
+
+#!SocketAdapter
 class SocketAdapter():
     """
         SocketAdapter base class
@@ -95,6 +103,7 @@ class SocketAdapter():
         pass
 
 
+#!AnyToChineseAdapter
 class AnyToChineseAdapter(SocketAdapter):
     """
         A concrete SocketAdapter class that can convert any socket to chinese socket
