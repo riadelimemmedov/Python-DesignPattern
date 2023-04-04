@@ -1,7 +1,8 @@
 
-#It works as a bridge between two incompatible interfaces. This pattern involves a single class which is responsible to join
-#functionalities of independent or incompatible interfaces.
-
+"""
+    It works as a bridge between two incompatible interfaces. This pattern involves a single class which is responsible to join
+    functionalities of independent or incompatible interfaces.
+"""
 
 from abc import ABC,abstractmethod
 
