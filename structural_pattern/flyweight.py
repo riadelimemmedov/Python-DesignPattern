@@ -1,3 +1,15 @@
+
+"""
+    The Flyweight design pattern is a structural pattern that aims to reduce the memory usage of an application by sharing objects between multiple contexts. 
+    It is useful when there is a large number of objects in the application, and the cost of creating each object is high. By sharing objects, 
+    the application can reduce memory usage and improve performance.
+
+    In Python, the Flyweight pattern can be implemented using a combination of class methods, instance variables, and dictionaries. Here's an example implementation
+"""
+
+#* https://www.geeksforgeeks.org/flyweight-method-python-design-patterns/ => his is great resource understant flyweight design pattern for python developers
+
+
 from abc import ABC,abstractmethod
 import random
 
