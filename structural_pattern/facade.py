@@ -5,7 +5,7 @@
     It provides an easier way to access methods of the underlying systems by providing a single entry point
 """
 
-#* https://www.geeksforgeeks.org/facade-method-python-design-patterns/ => his is great resource understant decorator design pattern for python developers
+#* https://www.geeksforgeeks.org/facade-method-python-design-patterns/ => his is great resource understant facade design pattern for python developers
 
 
 from dataclasses import dataclass
