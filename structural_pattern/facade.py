@@ -1,6 +1,6 @@
 
 """
-    The word Facae means the face of a building or particualarly an outer lying interface of a complex system,consist of several sub-systems
+    The word Facade means the face of a building or particualarly an outer lying interface of a complex system,consist of several sub-systems
     It is an essential part Gang of Four design pattern
     It provides an easier way to access methods of the underlying systems by providing a single entry point
 """
