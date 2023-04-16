@@ -31,7 +31,11 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+<<<<<<< HEAD
 note.txt
+=======
+
+>>>>>>> e9c479a7288333679162902f7f938f21641747a5
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
