@@ -95,10 +95,8 @@ class Flyweight:
     _shared_state = {}
     
     def __init__(self,intrinsic_state):
-        print('Dict value is before ', self.__dict__)
         self.__dict__ = self._shared_state
         self.intrinsic_state = intrinsic_state
-        print('Dict value is after ', self.__dict__)
         
     def operation(self,extrinsic_state):
         print(f"Intrinsic state : {self.intrinsic_state}\n. Extrinsic state : {extrinsic_state}")
@@ -110,7 +108,7 @@ class FlyweightFactory:
     @classmethod
     def get_flyweight(cls,intrinsic_state):
         if intrinsic_state not in cls._flyweights:
-            print('Intrinsic state value is ', intrinsic_state)
+            print('ins')
             cls._flyweights[intrinsic_state] = Flyweight(intrinsic_state)
         #else
         return cls._flyweights[intrinsic_state]
