@@ -73,6 +73,3 @@ if __name__ == "__main__":
     print(message_with_authentication)
     print('###################################################################################')
     print(message_without_authentication)
-    
-    
-    
