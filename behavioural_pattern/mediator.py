@@ -17,12 +17,17 @@ class ChatUser:
     def set_mediator(self, med: Mediator):
         self.mediator = med
 
+    def getMediator(self):
+        return 'Not found mediator' if self.mediator==None else self.mediator
+    
     def send(self, msg: str):
         print(f"{self.name}: Sending message {msg}")
         self.mediator.send_message(msg, self)
 
     def receive(self, msg: str):
         print(f"{self.name}: Receiving message {msg}")
+        
+        
 
 
 #!Mediator
