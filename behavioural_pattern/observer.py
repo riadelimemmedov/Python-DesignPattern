@@ -56,8 +56,7 @@ class EmailNotificationListener(EventListener):
         self.email = email
 
     def update(self, event_type: str, file):
-        print(
-            f"Email to {self.email}: Someone has performed {event_type} operation on the file {file}")
+        print(f"Email to {self.email}: Someone has performed {event_type} operation on the file {file}")
 
 
 #!LogOpenListener
@@ -66,8 +65,7 @@ class LogOpenListener(EventListener):
         self.log_file = log_file
 
     def update(self, event_type: str, file):
-        print(
-            f"Save to log {self.log_file}: Someone has performed {event_type} operation on the file {file}")
+        print(f"Save to log {self.log_file}: Someone has performed {event_type} operation on the file {file}")
 
 
 #__name__ == __main__
