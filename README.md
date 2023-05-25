@@ -1,7 +1,7 @@
 
 # Python Design Patterns
 
-Python Design Patterns is a collection of code examples that demonstrate various software design patterns using the Python programming language. The repository is maintained by Riad El-Memmedov and is licensed under the MIT License.
+Python Design Patterns is a collection of code examples that demonstrate various software design patterns using the Python programming language. The repository is maintained by Riad Alimammedov and is licensed under the MIT License.
 
 ###
 
