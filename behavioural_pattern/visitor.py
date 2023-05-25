@@ -74,7 +74,8 @@ if __name__ == "__main__":
     files = [TextFile("file1.txt"), PdfFile("file2.pdf"), ImageFile("file3.png")]
     compress_visitor = CompressVisitor()
     encrypt_visitor = EncryptVisitor()
-
+    
     for file in files:
+        print('File ', file)
         file.accept(compress_visitor)
         file.accept(encrypt_visitor)
